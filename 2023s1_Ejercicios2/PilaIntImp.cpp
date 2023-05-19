@@ -25,15 +25,15 @@ void pop(NodoListaInt*& p) {
 	
 	NodoListaInt* aBorrar = p;
 	p = p->sig;
-	delete aBorrar;
 	aBorrar->dato = NULL;
+	delete aBorrar;
 }
 
-NodoListaInt* clon(NodoListaInt* p) {
+NodoListaInt* auxClon(NodoListaInt* p) {
 	if (p == NULL) return NULL;
 	NodoListaInt* nuevoNodo = new NodoListaInt;
 	nuevoNodo->dato = p->dato;
-	nuevoNodo->sig = clon(p->sig);
+	nuevoNodo->sig = auxClon(p->sig);
 	return nuevoNodo;
 }
 
@@ -72,7 +72,7 @@ bool esVacia(PilaInt p) {
 
 PilaInt clon(PilaInt p) {
 	PilaInt cabezal = new _cabezalPilaInt;
-	cabezal->ppio = clon(p->ppio);
+	cabezal->ppio = auxClon(p->ppio);
 	cabezal->largo = p->largo;
 	return cabezal;
 	return NULL;
