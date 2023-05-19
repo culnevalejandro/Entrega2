@@ -7,7 +7,7 @@ struct _cabezalPilaInt {
 	unsigned int largo;
 };
 
-/* AUXILIARES */
+/* FUNCIONES AUXILIARES */
 
 void push(NodoListaInt*& l, int dato) {
 	if (l == NULL) {
@@ -27,11 +27,11 @@ NodoListaInt* auxClon(NodoListaInt* p) {
 	return nuevoNodo;
 }
 
-void destruir(NodoListaInt*& p) {
-	if (p == NULL) return;
-	destruir(p->sig);
-	p = NULL;
-	delete p;
+void destruir(NodoListaInt*& nodo) {
+	if (nodo == NULL) return;
+	destruir(nodo->sig);
+	nodo = NULL;
+	delete nodo;
 }
 
 /* FIN AUXILIARES */
@@ -50,10 +50,13 @@ void push(PilaInt& p, int e) {
 }
 
 int top(PilaInt p) {
+	if (esVacia(p)) return NULL;
 	return p->ppio->dato;
 }
 
 void pop(PilaInt& p) {
+	if (esVacia(p)) return;
+
 	NodoListaInt* aBorrar = p->ppio;
 	p->ppio = p->ppio->sig;
 	p->largo--;
@@ -78,8 +81,9 @@ PilaInt clon(PilaInt p) {
 }
 
 void destruir(PilaInt& p) {
-	destruir(p->ppio); 
-	p = NULL;
+	p->largo = 0;
+	destruir(p->ppio);
+	p->ppio = NULL;
 	delete p;
 }
 

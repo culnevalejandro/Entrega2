@@ -14,8 +14,9 @@ const char* PruebasPropias::getNombre() const
 	return "PruebasPropias";
 }
 
+
 void PruebasPropias::correrPruebaConcreta()
 {
-
+	//AGREGAR ACA LAS PRUEBAS
 }
 
