@@ -20,21 +20,18 @@ void push(NodoListaInt*& l, int dato) {
 	}
 }
 
-void pop(NodoListaInt*& p) {
-	if (p == NULL) return;
-	
-	NodoListaInt* aBorrar = p;
-	p = p->sig;
-	aBorrar->dato = NULL;
-	delete aBorrar;
-}
-
 NodoListaInt* auxClon(NodoListaInt* p) {
 	if (p == NULL) return NULL;
-	NodoListaInt* nuevoNodo = new NodoListaInt;
-	nuevoNodo->dato = p->dato;
+	NodoListaInt* nuevoNodo = new NodoListaInt(p->dato);
 	nuevoNodo->sig = auxClon(p->sig);
 	return nuevoNodo;
+}
+
+void destruir(NodoListaInt*& p) {
+	if (p == NULL) return;
+	destruir(p->sig);
+	p = NULL;
+	delete p;
 }
 
 /* FIN AUXILIARES */
@@ -53,13 +50,15 @@ void push(PilaInt& p, int e) {
 }
 
 int top(PilaInt p) {
-	assert(!esVacia(p));
 	return p->ppio->dato;
 }
 
 void pop(PilaInt& p) {
-	assert(!esVacia(p));
-	pop(p->ppio);
+	NodoListaInt* aBorrar = p->ppio;
+	p->ppio = p->ppio->sig;
+	p->largo--;
+	aBorrar = NULL;
+	delete aBorrar;
 }
 
 unsigned int cantidadElementos(PilaInt p) {
@@ -79,7 +78,9 @@ PilaInt clon(PilaInt p) {
 }
 
 void destruir(PilaInt& p) {
-	// NO IMPLEMENTADO
+	destruir(p->ppio); 
+	p = NULL;
+	delete p;
 }
 
 
