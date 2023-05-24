@@ -17,6 +17,9 @@ const char* PruebasPropias::getNombre() const
 
 void PruebasPropias::correrPruebaConcreta()
 {
-	//AGREGAR ACA LAS PRUEBAS
+	ListaPosInt lista = crearListaPosInt();
+	agregar(lista, 50, 2);
+	agregar(lista, 49, 1);
+	cout << elemento(lista, 1);
 }
 

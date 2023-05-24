@@ -77,7 +77,6 @@ PilaInt clon(PilaInt p) {
 	cabezal->ppio = auxClon(p->ppio);
 	cabezal->largo = p->largo;
 	return cabezal;
-	return NULL;
 }
 
 void destruir(PilaInt& p) {
