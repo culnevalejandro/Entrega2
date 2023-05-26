@@ -37,6 +37,7 @@ void destruir(NodoListaInt*& nodo) {
 /* FIN AUXILIARES */
 
 
+
 PilaInt crearPilaInt(){
 	PilaInt cabezal = new _cabezalPilaInt;
 	cabezal->ppio = NULL;

@@ -4,7 +4,7 @@
 
 struct _cabezalListaPosInt {
 	NodoListaInt* ppio;
-	unsigned int largo;
+	int largo;
 	int cantElementos;
 	int* vector;
 };
@@ -13,8 +13,14 @@ struct _cabezalListaPosInt {
 /* FUNCIONES AUXILIARES */
 
 void actualizarLargo(ListaPosInt& l) {
+	int* nuevoVector = new int[l->largo*2];
+
+	for (int pos = 0; pos < l->largo; pos++) {
+		nuevoVector[pos] = l->vector[pos];
+	}
+
+	l->vector = nuevoVector;
 	l->largo *= 2;
-	int* nuevoVector = new int[l->largo];
 }
 
 /* FIN FUNCIONES AUXILIARES */
@@ -23,7 +29,7 @@ void actualizarLargo(ListaPosInt& l) {
 ListaPosInt crearListaPosInt() {
 	ListaPosInt cabezal = new _cabezalListaPosInt;
 	cabezal->cantElementos = 0;
-	cabezal->largo = 20;
+	cabezal->largo = 2;
 	cabezal->vector = new int[cabezal->largo]();
 	return cabezal;
 }

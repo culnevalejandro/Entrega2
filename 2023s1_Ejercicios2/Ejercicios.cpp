@@ -80,11 +80,45 @@ ListaOrdInt UnionListaOrd(ListaOrdInt l1, ListaOrdInt l2)
 }
 
 
-bool EstaContenida(PilaInt p1, PilaInt p2)
-{
-	//IMPLEMENTAR SOLUCION
-	return false;
+bool EstaContenida(PilaInt p1, PilaInt p2) {
+	PilaInt pilaAux1 = clon(p1);
+	PilaInt pilaAux2 = clon(p2);
+
+	ListaOrdInt lista1 = crearListaOrdInt();
+	ListaOrdInt lista2 = crearListaOrdInt();
+
+	while (!esVacia(pilaAux1)) {
+		agregar(lista1, top(pilaAux1));
+		pop(pilaAux1);
+	}
+	destruir(pilaAux1);
+
+	while (!esVacia(pilaAux2)) {
+		agregar(lista2, top(pilaAux2));
+		pop(pilaAux2);
+	}
+	destruir(pilaAux2);
+
+	while (!esVacia(lista1) && existe(lista2, minimo(lista1))) {
+		borrar(lista2, minimo(lista1));
+		borrarMinimo(lista1);
+	}
+
+	bool retorno = esVacia(lista1);
+	destruir(lista1);
+	destruir(lista2);
+
+	return retorno;
 }
+
+/*
+	Implemente la funcion EstaContenida que dadas dos pilas: p1 y p2, de tipo PilaInt retorne true si y solo
+	si todos los elementos de p1 se encuentran en p2.
+	Si hay valores repetidos en p1, entonces se tienen que encontrar como minimo la misma cantidad
+	de repetidos de ese valor en p2.
+	Las pilas parametro no deberan ser modificadas.
+	La pila vacia esta contenida en cualquier pila.
+*/
 
 
 ListaOrdInt ObtenerRepetidos(MultisetInt m) 
