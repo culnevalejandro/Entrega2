@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ﻿  ColaArray.cpp
   ColaIntImp.cpp
   ColaPrioridadIntImp.cpp
@@ -7,22 +6,23 @@
   Defensa.cpp
   DiccionarioIntImp.cpp
   Ejercicios.cpp
-  EstadisticaPrueba.cpp
   FuncAux.cpp
   FuncAuxTAD.cpp
   FuncAux_s.cpp
   ListaOrdIntImp.cpp
   ListaOrdIntImp2.cpp
   ListaPosIntImp.cpp
-  main.cpp
+D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(35,10): warning C4018: '<': no coinciden signed/unsigned
+D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(36,46): warning C4018: '>=': no coinciden signed/unsigned
+D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(49,10): warning C4018: '<=': no coinciden signed/unsigned
   ManejadorArchivos.cpp
   ManejadorImpresionPrueba.cpp
   ManejadorSalidaPrueba.cpp
   MultisetIntImp.cpp
-  Generando código...
-  Compilando...
   PilaIntImp.cpp
   Prueba.cpp
+  Generando código...
+  Compilando...
   PruebasAuxDefensa.cpp
   PruebasAuxEntrega.cpp
   PruebasColaInt.cpp
@@ -41,15 +41,7 @@
   PruebasTablaIntString.cpp
   SetIntImp.cpp
   TablaIntIntImp.cpp
-  Generando código...
-  Compilando...
   TablaIntStringImp.cpp
+  main.cpp
   Generando código...
-  aFramework.vcxproj -> D:\ORT\Estructura de datos y Algoritmos 1\Repos\Entrega2\2023s1_Ejercicios2\Debug\aFramework.exe
-=======
-﻿  ListaPosIntImp.cpp
-D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(34,10): warning C4018: '<': no coinciden signed/unsigned
-D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(35,46): warning C4018: '>=': no coinciden signed/unsigned
-D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\ListaPosIntImp.cpp(48,10): warning C4018: '<=': no coinciden signed/unsigned
   aFramework.vcxproj -> D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\Debug\aFramework.exe
->>>>>>> Stashed changes

@@ -3,51 +3,9 @@
 #ifdef LISTA_POS_INT_IMP
 
 struct _cabezalListaPosInt {
-<<<<<<< Updated upstream
-	//IMPLEMENTAR SOLUCION
-};
-
-ListaPosInt crearListaPosInt()
-{
-	//IMPLEMENTAR SOLUCION
-	return NULL;
-}
-
-void agregar(ListaPosInt& l, int e, unsigned int pos)
-{
-	//IMPLEMENTAR SOLUCION
-}
-
-void borrar(ListaPosInt& l, unsigned int pos)
-{
-	//IMPLEMENTAR SOLUCION
-}
-
-int elemento(ListaPosInt l, unsigned int pos)
-{
-	//IMPLEMENTAR SOLUCION
-	return 0;
-}
-
-bool esVacia(ListaPosInt l)
-{
-	//IMPLEMENTAR SOLUCION
-	return true;
-}
-
-unsigned int cantidadElementos(ListaPosInt l)
-{
-	//IMPLEMENTAR SOLUCION
-	return 0;
-}
-
-ListaPosInt clon(ListaPosInt l)
-{
-	//IMPLEMENTAR SOLUCION
-	return NULL;
-=======
-	int cantElementos;
+	NodoListaInt* ppio;
 	unsigned int largo;
+	int cantElementos;
 	int* vector;
 };
 
@@ -115,7 +73,6 @@ ListaPosInt clon(ListaPosInt l) {
 	}
 
 	return retorno;
->>>>>>> Stashed changes
 }
 
 void destruir(ListaPosInt& l) {

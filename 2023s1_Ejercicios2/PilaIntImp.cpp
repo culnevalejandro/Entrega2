@@ -3,45 +3,87 @@
 #ifdef PILA_INT_IMP
 
 struct _cabezalPilaInt {
-	// NO IMPLEMENTADO
+	NodoListaInt* ppio;
+	unsigned int largo;
 };
+
+/* FUNCIONES AUXILIARES */
+
+void push(NodoListaInt*& l, int dato) {
+	if (l == NULL) {
+		l = new NodoListaInt(dato);
+	}
+	else {
+		NodoListaInt* nuevoNodo = new NodoListaInt(dato);
+		nuevoNodo->sig = l;
+		l = nuevoNodo;
+	}
+}
+
+NodoListaInt* auxClon(NodoListaInt* p) {
+	if (p == NULL) return NULL;
+	NodoListaInt* nuevoNodo = new NodoListaInt(p->dato);
+	nuevoNodo->sig = auxClon(p->sig);
+	return nuevoNodo;
+}
+
+void destruir(NodoListaInt*& nodo) {
+	if (nodo == NULL) return;
+	destruir(nodo->sig);
+	nodo = NULL;
+	delete nodo;
+}
+
+/* FIN AUXILIARES */
 
 
 PilaInt crearPilaInt(){
-	// NO IMPLEMENTADO
-	return NULL;
+	PilaInt cabezal = new _cabezalPilaInt;
+	cabezal->ppio = NULL;
+	cabezal->largo = 0;
+	return cabezal;
 }
 
 void push(PilaInt& p, int e) {
-	// NO IMPLEMENTADO
+	push(p->ppio, e);
+	p->largo++;
 }
 
 int top(PilaInt p) {
-	// NO IMPLEMENTADO
-	return 0;
+	if (esVacia(p)) return NULL;
+	return p->ppio->dato;
 }
 
 void pop(PilaInt& p) {
-	// NO IMPLEMENTADO
+	if (esVacia(p)) return;
+
+	NodoListaInt* aBorrar = p->ppio;
+	p->ppio = p->ppio->sig;
+	p->largo--;
+	aBorrar = NULL;
+	delete aBorrar;
 }
 
 unsigned int cantidadElementos(PilaInt p) {
-	// NO IMPLEMENTADO
-	return 0;
+	return p->largo;
 }
 
 bool esVacia(PilaInt p) {
-	// NO IMPLEMENTADO
-	return true;
+	return p->largo == 0;
 }
 
 PilaInt clon(PilaInt p) {
-	// NO IMPLEMENTADO
-	return NULL;
+	PilaInt cabezal = new _cabezalPilaInt;
+	cabezal->ppio = auxClon(p->ppio);
+	cabezal->largo = p->largo;
+	return cabezal;
 }
 
 void destruir(PilaInt& p) {
-	// NO IMPLEMENTADO
+	p->largo = 0;
+	destruir(p->ppio);
+	p->ppio = NULL;
+	delete p;
 }
 
 
