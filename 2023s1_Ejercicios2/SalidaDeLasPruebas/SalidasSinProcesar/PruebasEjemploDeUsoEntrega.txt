@@ -225,13 +225,21 @@ elementos del clon de la pila:
 Largo de lista Pos: 0
 
 -!-54::0-?-?-Imprimo largo luego de agregar
+5,7,-1,-2,5,4,15
 
 -!-55::0-?-?-Clono e imprimo
 Cantidad de elementos del clon luego de vaciarlo: 0
+<<<<<<< Updated upstream
 Cantidad de elementos de la cola luego de vaciar clon: 0
 
 -!-56::0-?-?-Verifico que se modifique el clon y no el original
 Largo de lista Pos luego de borrar 4 elementos: 0
+=======
+Cantidad de elementos de la cola luego de vaciar clon: 7
+
+-!-56::0-?-?-Verifico que se modifique el clon y no el original
+Largo de lista Pos luego de borrar 4 elementos: 3
+>>>>>>> Stashed changes
 Largo de lista Pos luego de vaciarla: 0
 
 -!-57::0-?-?-Borro algunos elementos y vacio la lista

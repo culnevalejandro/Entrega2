@@ -509,6 +509,7 @@ PRUEBAS FUNCION PRUEBAS MenorPrioridad                             HAY 10 PRUEBA
 -----------------------------------
 Prueba 42: Imprimo la cantidad de elementos al crear la pila y valido que sea vacia -> OK
 -----------------------------------
+<<<<<<< Updated upstream
 Prueba 43: Imprimo el tope de la pila con 1 elemento para validar el caso base de push
  -> ERROR impresion incorrecta
 Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
@@ -620,10 +621,32 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
 1 : elementos de la pila: 
 2 ! elementos del clon de la pila: 
 3 ! 
+=======
+Prueba 43: Imprimo el tope de la pila con 1 elemento para validar el caso base de push -> OK
+-----------------------------------
+Prueba 44: Imprimo si esta vacia o llena antes y despues de agregar, verificando que push funcione -> OK
+-----------------------------------
+Prueba 45: Imprimo largo luego de agregar -> OK
+-----------------------------------
+Prueba 46: Imprimo el primer elemento antes y despues del pop, verificando que disminuya la cantidad de elementos -> OK
+-----------------------------------
+Prueba 47: Clono e imprimo los elementos de la pila clonando y poppeando -> OK
+-----------------------------------
+Prueba 48: Verifico que se modifique el clon y no el original -> OK
+-----------------------------------
+Prueba 49: Verifico que pushear y poppear elementos no altere la estructura de la pila -> OK
+-----------------------------------
+Prueba 50: Verifico que funcione el caso base de pop dejando la pila vacia -> OK
+-----------------------------------
+Prueba 51: Verifico que destruir el clon no altere la pila original -> OK
+-----------------------------------
+Prueba 52: Verifico que el clon copie todos los elementos de la pila -> OK
+>>>>>>> Stashed changes
 -----------------------------------
 Prueba 53: Libero memoria -> OK
 ********* FIN PRUEBAS PilaInt*******
 
+<<<<<<< Updated upstream
 PRUEBAS FUNCION PRUEBAS PilaInt                                    HAY 9 PRUEBAS INCORRECTAS
 
 ********* INICIO PRUEBAS ListaPosInt*******
@@ -674,11 +697,28 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
 1 ! Largo de lista Pos luego de borrar 4 elementos: 0
 2 : Largo de lista Pos luego de vaciarla: 0
 3 : 
+=======
+PRUEBAS FUNCION PRUEBAS PilaInt                                    PRUEBAS CORRECTAS
+
+********* INICIO PRUEBAS ListaPosInt*******
+-----------------------------------
+Prueba 54: Imprimo largo luego de agregar -> OK
+-----------------------------------
+Prueba 55: Clono e imprimo -> OK
+-----------------------------------
+Prueba 56: Verifico que se modifique el clon y no el original -> OK
+-----------------------------------
+Prueba 57: Borro algunos elementos y vacio la lista -> OK
+>>>>>>> Stashed changes
 -----------------------------------
 Prueba 58: Libero memoria -> OK
 ********* FIN PRUEBAS ListaPosInt*******
 
+<<<<<<< Updated upstream
 PRUEBAS FUNCION PRUEBAS ListaPosInt                                HAY 4 PRUEBAS INCORRECTAS
+=======
+PRUEBAS FUNCION PRUEBAS ListaPosInt                                PRUEBAS CORRECTAS
+>>>>>>> Stashed changes
 
 ********* INICIO PRUEBAS ColaInt*******
 -----------------------------------
@@ -1266,5 +1306,9 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 7 PRUEBAS
 
 ----------------
 PRUEBAS FUNCIONES 
+<<<<<<< Updated upstream
 PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  3 INCORRECTAS: 11
+=======
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  5 INCORRECTAS:  9
+>>>>>>> Stashed changes
 PRUEBAS FUNCIONES 

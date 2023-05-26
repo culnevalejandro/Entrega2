@@ -73,10 +73,16 @@ ListaOrdInt UnionListaOrd(ListaOrdInt l1, ListaOrdInt l2)
 	return retorno;
 }
 
+<<<<<<< Updated upstream
 //EJERCICIO 3
 bool EstaContenida(PilaInt p1, PilaInt p2)
 {
 	//IMPLEMENTAR SOLUCION
+=======
+
+bool EstaContenida(PilaInt p1, PilaInt p2) {
+	
+>>>>>>> Stashed changes
 	return false;
 }
 

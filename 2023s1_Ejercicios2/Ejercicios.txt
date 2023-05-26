@@ -26,7 +26,7 @@ NOTA: Para poder ejecutar tienen que estar implementadas todas las operaciones d
 	en tiempo de ejecucion constante en el peor caso.
 	La implementacion no debe ser acotada.
 
-4)	Complete la implementacion ListaPosIntImp del TAD ListaPosInt especificado en el proyecto,
+4)	Complete la implementacion IntImp del TAD ListaPosInt especificado en el proyecto,
 	de forma que las operaciones elemento y cantidadElementos se realicen en tiempo de ejecucion
 	constante en el peor caso. 
 	La implementacion no debe ser acotada.
