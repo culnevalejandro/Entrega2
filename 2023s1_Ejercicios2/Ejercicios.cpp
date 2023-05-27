@@ -111,15 +111,6 @@ bool EstaContenida(PilaInt p1, PilaInt p2) {
 	return retorno;
 }
 
-/*
-	Implemente la funcion EstaContenida que dadas dos pilas: p1 y p2, de tipo PilaInt retorne true si y solo
-	si todos los elementos de p1 se encuentran en p2.
-	Si hay valores repetidos en p1, entonces se tienen que encontrar como minimo la misma cantidad
-	de repetidos de ese valor en p2.
-	Las pilas parametro no deberan ser modificadas.
-	La pila vacia esta contenida en cualquier pila.
-*/
-
 
 ListaOrdInt ObtenerRepetidos(MultisetInt m) 
 {

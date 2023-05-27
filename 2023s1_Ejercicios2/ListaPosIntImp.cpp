@@ -3,10 +3,9 @@
 #ifdef LISTA_POS_INT_IMP
 
 struct _cabezalListaPosInt {
-	NodoListaInt* ppio;
 	int largo;
 	int cantElementos;
-	int* vector;
+	int* datos;
 };
 
 
@@ -16,10 +15,10 @@ void actualizarLargo(ListaPosInt& l) {
 	int* nuevoVector = new int[l->largo*2];
 
 	for (int pos = 0; pos < l->largo; pos++) {
-		nuevoVector[pos] = l->vector[pos];
+		nuevoVector[pos] = l->datos[pos];
 	}
 
-	l->vector = nuevoVector;
+	l->datos = nuevoVector;
 	l->largo *= 2;
 }
 
@@ -30,7 +29,7 @@ ListaPosInt crearListaPosInt() {
 	ListaPosInt cabezal = new _cabezalListaPosInt;
 	cabezal->cantElementos = 0;
 	cabezal->largo = 2;
-	cabezal->vector = new int[cabezal->largo]();
+	cabezal->datos = new int[cabezal->largo]();
 	return cabezal;
 }
 
@@ -40,12 +39,12 @@ void agregar(ListaPosInt& l, int e, unsigned int pos) {
 	}
 	if (pos < l->cantElementos) {
 		for (int cambio = l->cantElementos; cambio >= pos; cambio--) {
-			l->vector[cambio + 1] = l->vector[cambio];
+			l->datos[cambio + 1] = l->datos[cambio];
 		}
-		l->vector[pos] = e;
+		l->datos[pos] = e;
 	}
 	else {
-		l->vector[l->cantElementos] = e;
+		l->datos[l->cantElementos] = e;
 	}
 
 	l->cantElementos++;
@@ -54,14 +53,14 @@ void agregar(ListaPosInt& l, int e, unsigned int pos) {
 void borrar(ListaPosInt& l, unsigned int pos) {
 	if (pos <= l->cantElementos - 1 && l->cantElementos != 0) {
 		for (int cambio = pos; cambio < l->cantElementos; cambio++) {
-			l->vector[cambio] = l->vector[cambio + 1];
+			l->datos[cambio] = l->datos[cambio + 1];
 		}
 		l->cantElementos--;
 	}
 }
 
 int elemento(ListaPosInt l, unsigned int pos) {	// O(1)
-	return l->vector[pos];
+	return l->datos[pos];
 }
 
 bool esVacia(ListaPosInt l) {
@@ -75,15 +74,15 @@ unsigned int cantidadElementos(ListaPosInt l) { // O(1)
 ListaPosInt clon(ListaPosInt l) {
 	ListaPosInt retorno = crearListaPosInt();
 	for (int pos = 0; pos < l->cantElementos; pos++) {
-		agregar(retorno, l->vector[pos], pos);
+		agregar(retorno, l->datos[pos], pos);
 	}
 
 	return retorno;
 }
 
 void destruir(ListaPosInt& l) {
-	delete[] l->vector;
-	l->vector = NULL;
+	delete[] l->datos;
+	l->datos = NULL;
 
 	delete l;
 	l = NULL;
