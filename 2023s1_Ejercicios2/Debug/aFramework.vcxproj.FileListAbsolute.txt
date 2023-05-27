@@ -3,7 +3,4 @@ D:\ORT\Estructura de datos y Algoritmos 1\Repos\Entrega2\2023s1_Ejercicios2\Debu
 D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\Debug\aFramework.exe
 D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\2023s1_Ejercicios2\Debug\aFramework.exe
 C:\Users\culne\OneDrive\Escritorio\Entrega2-sinTerminar\Entrega2-sinTerminar\2023s1_Ejercicios2\Debug\aFramework.exe
-<<<<<<< Updated upstream
-=======
 C:\Users\culne\OneDrive\Escritorio\Entrega2-main\Entrega2-main\2023s1_Ejercicios2\Debug\aFramework.exe
->>>>>>> Stashed changes

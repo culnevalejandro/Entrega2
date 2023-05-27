@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-﻿  ColaIntImp.cpp
-=======
 ﻿  ColaArray.cpp
   ColaIntImp.cpp
   ColaPrioridadIntImp.cpp
@@ -50,5 +47,4 @@ D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios
   Compilando...
   main.cpp
   Generando código...
->>>>>>> Stashed changes
   aFramework.vcxproj -> D:\ORT\Estructura de datos y Algoritmos 1\Repositorio\Entrega2\2023s1_Ejercicios2\Debug\aFramework.exe
